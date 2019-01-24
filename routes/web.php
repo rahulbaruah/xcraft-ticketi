@@ -19,3 +19,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/changepassword','LoginController@changePasswordForm')->name('changepassword');
+
+Route::post('/changepassword','LoginController@postCredentials')->name('changepassword');
